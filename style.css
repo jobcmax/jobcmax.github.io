@@ -1,0 +1,28 @@
+@import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
+
+:root {
+  --bs-font-sans-serif: 'Inter var', sans-serif !important;
+  --bs-font-monospace: 'JetBrains Mono', monospace !important;
+  --bs-body-font-weight: 500 !important;
+  --bs-btn-border-radius: 0px !important;
+  --bs-body-color: #000 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+}
+
+::selection {
+  background-color: var(--bs-blue);
+  color: var(--bs-light);
+}
+
+code {
+  font-family: var(--bs-font-monospace) !important;
+}
+
+.custom-justify {
+  text-align: justify;
+  text-align-last: center;
+  padding: 0 10px 0 10px;
+}

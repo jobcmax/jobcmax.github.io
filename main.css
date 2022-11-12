@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+  --bs-font-sans-serif: 'Inter var', sans-serif !important;
+  --bs-font-monospace: 'JetBrains Mono', monospace !important;
+  --bs-body-font-weight: 500 !important;
+  --bs-btn-border-radius: 0px !important;
+  --bs-body-color: #000 !important;
+  --bs-dark: #000 !important;
+  --bs-primary: var(--bs-dark) !important;
+  --bs-link-color: #0a58ca !important;
+  --bs-link-hover-color: #0d6efd !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+}
+
+::selection {
+  background-color: var(--bs-blue);
+  color: var(--bs-light);
+}
+
+code {
+  font-family: var(--bs-font-monospace) !important;
+}
+
+.btn-primary {
+  border-radius: 4px !important;
+  font-weight: var(--bs-body-font-weight) !important;
+  border: 2px solid var(--bs-primary) !important;
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+}

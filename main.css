@@ -1,39 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,500;0,700;1,500;1,700&display=swap');
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
+@import url("https://rsms.me/inter/inter.css");
 
 :root {
+  --bs-body-bg: var(--bs-dark) !important;
+  --bs-body-color: var(--bs-light) !important;
   --bs-font-sans-serif: 'Inter var', sans-serif !important;
   --bs-font-monospace: 'JetBrains Mono', monospace !important;
   --bs-body-font-weight: 500 !important;
   --bs-btn-border-radius: 0px !important;
-  --bs-body-color: #000 !important;
-  --bs-dark: #000 !important;
-  --bs-primary: var(--bs-dark) !important;
-  --bs-link-color: #0a58ca !important;
-  --bs-link-hover-color: #0d6efd !important;
+  --bs-dark: #080a0d !important;
+  --bs-dark-rgb: 8, 10, 13 !important;
+  --bs-light: #fff !important;
+  --bs-body-color-rgb: 255, 255, 255 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold !important;
 }
 
+p {
+  color: var(--bs-gray-500) !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 13% !important;
+}
+
 ::selection {
-  background-color: var(--bs-blue);
-  color: var(--bs-light);
+  background-color: rgba(13, 110, 253, 0.70);
+  color: var(--bs-body-color);
 }
 
 code {
   font-family: var(--bs-font-monospace) !important;
 }
 
+.custom-justify {
+  text-align: justify;
+  text-align-last: center;
+  padding: 0 10px 0 10px;
+}
+
 .btn-primary {
-  border-radius: 4px !important;
-  font-weight: var(--bs-body-font-weight) !important;
-  border: 2px solid var(--bs-primary) !important;
-  background-color: var(--bs-primary) !important;
+  background-color: var(--bs-light) !important;
 }
 
 .btn-primary:hover {
-  background-color: var(--bs-body-bg) !important;
-  color: var(--bs-body-color) !important;
+  background-color: var(--bs-gray-500) !important;
+}
+
+.btn {
+  border: none !important;
+  color: var(--bs-body-bg) !important;
+  font-weight: var(--bs-body-font-weight) !important;
+  border-radius: 4px !important;
 }

@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+	--font-family: 'Roboto Condensed', sans-serif !important;	
+}
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Inter var', sans-serif !important;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	margin-bottom: 0px !important;
 }
 
 p {
-	font-family: 'Inter var', sans-serif !important;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	font-weight: medium !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 div {
 	font-family: 'Inter var', sans-serif;
+}
+
+a:focus {
+	background-color: transparent !important;
 }

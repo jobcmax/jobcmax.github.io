@@ -1,1 +1,1 @@
-console.log("no hackies my website pleas :)")
+console.log("no hackies my website pleas :-)")

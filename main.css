@@ -1,25 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-	--font-family: 'Roboto Condensed', sans-serif !important;	
+	--bg: #101419;
+	--fg: #dee1e6;
+	--links: #70a5eb;
+}
+
+body {
+	display: table-cell;
+    vertical-align: middle;
+	background-color: var(--bg);
+	height: 100%;
+	font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+td {
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto Condensed', sans-serif !important;
-	margin-bottom: 0px !important;
+	color: var(--fg);
+	font-weight: 400;
 }
 
 p {
-	font-family: 'Roboto Condensed', sans-serif !important;
-	font-weight: medium !important;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
+	color: var(--fg);
+	font-weight: thin;
 }
 
 div {
-	font-family: 'Inter var', sans-serif;
+
 }
 
-a:focus {
-	background-color: transparent !important;
+th {
+	padding: 1em;
+	color: var(--fg);
+}
+
+a {
+	color: var(--links);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+html {
+    display: table;
+    margin: auto;
+    height: 100%;
+}
+
+.subtext {
+	color: var(--fg);
+	text-align: center;
+	font-size: 1em;
+}
+
+.header {
+	text-align: center;
 }

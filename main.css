@@ -7,17 +7,16 @@
   --mid: #1f2328;
   --fg: #dee1e6;
   --primary: #70a5eb;
+  --primaryrgba: 112, 165, 235;
+  --radius: 4px;
   --sans: 'IBM Plex Sans', sans-serif;
-/*  --serif: 'IBM Plex Serif', serif;*/
-/*  --mono: 'IBM Plex Mono', monospace;*/
-/*unused fonts*/
+  --serif: 'IBM Plex Serif', serif;;
+  --mono: 'IBM Plex Mono', monospace;
 }
 
 body {
   background-color: var(--bg);
   height: 100%;
-  padding: 0px;
-  margin: 0px;
   color: var(--fg);
   font-family: var(--sans)
 }
@@ -29,12 +28,14 @@ body {
 }
 
 a {
+  transition: 0.3s;
   color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  /*  text-decoration: underline;*/ 
+  background-color: rgba(var(--primaryrgba), 0.15);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,7 +99,6 @@ img {
 button {
   display: block;
   background-color: var(--primary);
-  border: none;
   border: 2px solid var(--primary);
   padding: 0.5em;
   font-size: 1em;
@@ -106,9 +106,9 @@ button {
 }
 
 button:hover {
-  background-color: var(--bg);
-  color: var(--fg);
-  border: 2px solid var(--primary);
+  background-color: rgba(var(--primaryrgba), 0.8);
+  color: var(--bg);
+  border: 2px solid rgba(var(--primaryrgba), 0.8);
 }
 
 button:active {
@@ -200,9 +200,17 @@ textarea {
   text-align: center;
 }
 
-small {
-  font-size: 0.5em;
-  font-weight: 400;
+.header {
+  text-align: center;
+}
+
+span {
+  color: var(--mid);
+}
+
+.pfp {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 4px;
 }
 
 @media only screen and (max-width: 600px) {

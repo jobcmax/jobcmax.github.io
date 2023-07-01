@@ -1,86 +1,126 @@
-/*dumb.css created by jobcmax*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;0,700;1,500;1,700&family=Space+Grotesk:wght@500;700&display=swap');
+
 :root {
-  --bg: #0D1117;
-  --mid: #21262D;
-  --fg: #ECF2f8;
-  --primary: #77BDFB;
-  --primaryrgba: 119, 189, 251;
+  --red: #ff5f82;
+  --yellow: #ffb268;
+  --green: #7af485;
+  --purple: #9f8cf1;
+  --pink: #ed7ce2;
+  --bg: #000;
+  --fg: #fff;
+  --fgRGBA: 255, 255, 255;
+  --primary: #6dbaf1;
+  --primaryRGBA: 109, 186, 241;
+  --gray-2: #151515;
+  --gray-1: #3c3c3c;
   --radius: 4px;
-  --sans: 'Inter var', sans-serif;
-  --mono: 'Roboto Mono', monospace;
+  --sans: 'Inter Var', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
 }
 
 body {
   background-color: var(--bg);
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
   color: var(--fg);
-  font-family: var(--sans)
+  font-family: var(--sans);
+  font-weight: 500;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
-a {
-  transition: 0.3s;
-  color: var(--primary);
-  font-family: var(--sans);
-  text-decoration: none;
-}
-
-a:hover {
-  /*  text-decoration: underline;*/ 
-  background-color: rgba(var(--primaryrgba), 0.10);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  padding: 0px;
-}
-
-p {
-/*  line-height: em;*/
-}
-
-::selection {
-  background: rgba(var(--primaryrgba), 0.20);
+h1 {
+  background: linear-gradient(
+    to right,
+    var(--primary) 20%,
+    var(--pink) 30%,
+    var(--primary) 70%,
+    var(--pink) 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 4s ease-in-out infinite alternate;
 }
 
 .center {
   position: absolute;
+/*  display: flex;*/
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 600px) {
-  .center h1 {
-    padding: 0px;
-    margin: 0px;
-    font-size: 1.6em;
+::selection {
+  background: rgba(var(--primaryRGBA), 0.30) !important;
+  color: var(--fg) !important;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#cursor {
+  width: 2px;
+  margin-left: 2px;
+  height: 2em;
+  margin: auto;
+  background-color: var(--fg);
+/*  animation: blinker infinite cubic-bezier(1,0,0,1) 1s;*/
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  justify-content: center;
+  width: 50%;
+/*  padding: 10px;*/
+/*  height: 300px;*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column a, span {
+  margin-bottom: 1.4em;
+  float: right;
+  text-align: right;
+}
+
+.social {
+  display: block;
+}
+
+img {
+  display: block;
+  margin-bottom: 1em;
+/*  margin: auto;*/
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
   }
-  .center {
-    width: 80%;
-    position: unset;
-    left: unset;
-    top: unset;
-    transform: unset;
-    -webkit-transform: unset;
-    margin: 0 auto;
-    margin-top: 2em;
-    padding-top: 2em;
+  100% {
+    background-position: 100% 50%;
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .content {
-    width: 80%;
-  }
+.discord {
+  margin-left: -.2em;
 }

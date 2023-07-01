@@ -112,6 +112,14 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: var(--bg);
+  border: none;
+  cursor: pointer;
+  padding: 24px;
+  outline: none;
+}
+
 @keyframes textShine {
   0% {
     background-position: 0% 50%;
